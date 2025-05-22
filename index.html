@@ -206,7 +206,7 @@
         moveIcon();
         
         icon.onmouseenter=()=>{
-            if(clicks<4){
+            if(clicks<2){
                 icon.classList.add('running');
                 setTimeout(()=>{
                     icon.classList.remove('running');
@@ -217,7 +217,7 @@
         
         icon.onclick=(e)=>{
             clicks++;
-            if(clicks<5){
+            if(clicks<2){
                 createParticles(e.clientX,e.clientY,['#ddd','#bbb','#999']);
                 moveIcon();
                 return;
